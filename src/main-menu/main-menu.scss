@@ -1,0 +1,12 @@
+.main-menu {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 33px 10px 10px 5px;
+    background-color: #8cb6cc;
+}
+
+@import './main-menu__list';
+@import './main-menu__item';
+@import './main-menu__burger';
+@import './burger-content/burger-content';

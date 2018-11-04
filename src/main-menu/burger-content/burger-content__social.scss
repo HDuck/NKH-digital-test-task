@@ -1,0 +1,10 @@
+.burger-content__social {
+    height: 40px;
+    width: 180px;
+    background-color: #1c5394;
+    transition: transform .25s linear .25s, opacity .25s linear .25s;
+    transform: translateY(35px);
+    opacity: 0;
+}
+
+@import './burger-content__social_show';

@@ -1,0 +1,11 @@
+.burger-content__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: transform .25s linear .25s, opacity .25s linear .25s;
+    transform: translateY(35px);
+    opacity: 0;
+}
+
+@import './burger-content__list_show';

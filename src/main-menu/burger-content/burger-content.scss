@@ -1,0 +1,22 @@
+.burger-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: grid;
+    grid-template: 130px 150px 150px 120px / 220px 250px;
+    grid-row-gap: 50px;
+    height: 1000px;
+    padding-left: 30px;
+    background-color: gray;
+    box-shadow: 4px 0 14px rgba(0, 0, 0, 0.2);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .3s linear 0s;
+}
+
+@import './burger-content_show';
+@import './burger-content__back';
+@import './burger-content__list';
+@import './burger-content__item';
+@import './burger-content__social';
