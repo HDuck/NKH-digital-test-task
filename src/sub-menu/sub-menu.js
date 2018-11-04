@@ -1,4 +1,4 @@
-$(function() {
+$(function subMenu() {
     $('.sub-menu').accordion({
         active: false,
         collapsible: true,

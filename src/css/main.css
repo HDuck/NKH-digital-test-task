@@ -58,7 +58,9 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 112px; }
+  width: 112px;
+  -webkit-box-shadow: 1px 0 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0 14px rgba(0, 0, 0, 0.2); }
 
 .logo {
   position: relative;
