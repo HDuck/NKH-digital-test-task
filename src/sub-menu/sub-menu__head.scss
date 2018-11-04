@@ -1,0 +1,23 @@
+.sub-menu__head {
+    height: 67px;
+    padding: 27px 20px 19px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    transition: height .2s linear 0s, padding .2s linear 0s;
+
+    &:first-child {
+        background-color: #37b1a8;
+    }
+
+    &:nth-child(3) {
+        background-color: #1c5394;
+    }
+}

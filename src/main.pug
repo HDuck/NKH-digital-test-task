@@ -99,6 +99,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         title NKH digital studio test task
+        link(rel="stylesheet", type="text/css", href=`./css/styles${devMode ? '' : '.min'}.css`)
+        script(src="https://code.jquery.com/jquery-1.12.4.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     body
         +container
             +header
@@ -122,3 +125,4 @@ html(lang="en")
                 +user-bar(userBar)
             +footer
                 +copyright
+        script(src=`./js/scripts${devMode ? '' : '.min'}.js`)

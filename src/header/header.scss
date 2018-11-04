@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 611px;
+    height: 1000px;
+}
+
+@import './header__mainbar';
+@import './header__sidebar';

@@ -1,0 +1,33 @@
+.sub-menu__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 180px;
+    padding: 3px 0 11px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -14px;
+        right: 49px;
+        border: 8px solid transparent;
+    }
+
+    &:nth-child(2) {
+        background-color: #1da197;
+
+        &::before {
+            border-bottom-color: #1da197;
+        }
+    }
+
+    &:nth-child(4) {
+        background-color: darken(#1c5394, 5);
+
+        &::before {
+            border-bottom-color: darken(#1c5394, 5);
+        }
+    }
+}
