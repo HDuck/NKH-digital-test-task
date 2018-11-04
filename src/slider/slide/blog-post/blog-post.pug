@@ -1,0 +1,10 @@
+include blog-post__title
+include blog-post__date
+include blog-post__img
+
+mixin blog-post(title, imgSrc, date)
+    article.blog-post
+        +blog-post__title(title)
+        +blog-post__img(imgSrc)
+        +blog-post__date(date)
+        block

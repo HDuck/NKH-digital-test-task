@@ -1,0 +1,5 @@
+mixin user-bar__item(name, link, icon)
+    if (icon)
+        a(class=`user-bar__item user-bar__item_icon_${icon}`, href=link)= name
+    else
+        a(class="user-bar__item", href=link)= name

@@ -1,0 +1,46 @@
+include blog-post/blog-post
+include social-news/social-news
+include connect-check/connect-check
+
+mixin slide(content)
+    .slide
+        - var blockCount = 0;
+        while (blockCount < content.blocksType.length)
+            case content.blocksType[blockCount]
+                when 'blog'
+                    +blog-post(
+                        content.blocksContent[`${blockCount}`].topic,
+                        content.blocksContent[`${blockCount}`].imgSrc,
+                        content.blocksContent[`${blockCount}`].date
+                    )
+                        if (content.blocksContent[`${blockCount}`].btnType)
+                            +button(
+                                content.blocksContent[`${blockCount}`].btnType.arrowSize,
+                                content.blocksContent[`${blockCount}`].btnType.arrowColor
+                            )
+                    - break;
+                when 'social'
+                    +social-news(
+                        content.blocksContent[`${blockCount}`].topic,
+                        content.blocksContent[`${blockCount}`].social,
+                        content.blocksContent[`${blockCount}`].date
+                    )
+                        if (content.blocksContent[`${blockCount}`].btnType)
+                            +button(
+                                content.blocksContent[`${blockCount}`].btnType.arrowSize,
+                                content.blocksContent[`${blockCount}`].btnType.arrowColor,
+                                content.blocksContent[`${blockCount}`].btnType.name,
+                                content.blocksContent[`${blockCount}`].btnType.fontSize
+                            )
+                    - break;
+                when 'loc'
+                    +connect-check
+                        if (content.blocksContent[`${blockCount}`].btnType)
+                            +button(
+                                content.blocksContent[`${blockCount}`].btnType.arrowSize,
+                                content.blocksContent[`${blockCount}`].btnType.arrowColor,
+                                content.blocksContent[`${blockCount}`].btnType.name,
+                                content.blocksContent[`${blockCount}`].btnType.fontSize
+                            )
+                    - break;
+            - blockCount++;

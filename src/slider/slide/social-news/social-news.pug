@@ -1,0 +1,10 @@
+include social-news__title
+include social-news__social
+include social-news__date
+
+mixin social-news(title, social, date)
+    section.social-news
+        +social-news__title(title)
+        +social-news__social(social)
+        +social-news__date(date)
+        block

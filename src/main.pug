@@ -39,7 +39,48 @@
             }
         }
     };
+    var promo = {
+        head: 'DN-650 за 500 руб/мес',
+        subHead: 'Безлимитный интернет',
+        desc: 'Скорость входящего/исходящего канала, Кбит/с<br>днем 14000, ночью 20000'
+    };
+    var buttons = {
+        promo: { arrowSize: 'normal', arrowColor: 'blue', name: 'Подключиться', fontSize: 'normal' },
+        blog: { arrowSize: 'medium', arrowColor: 'orange' },
+        subscribe: { arrowSize: 'normal', arrowColor: 'blue', name: 'Подписаться', fontSize: 'small' },
+        sendRequest: { arrowSize: 'normal', arrowColor: 'gray', name: 'Оставить заявку на подключение', fontSize: 'normal' },
+        
+    };
+    var slides = {
+        first: {
+            blocksType: ['blog', 'social-news', 'loc'],
+            blocksContent: {
+                '0': {
+                    date: '28 января 2016',
+                    topic: 'Телевизионные каналы в цифровом качестве на основе технологии IP (IPTV)',
+                    imgSrc: '###insert-img-src###',
+                    btnType: buttons.blog
+                },
+                '1': {
+                    date: '11 февраля 2016 в 4:34',
+                    topic: 'Произошла авария с обрывом линий сетей интернет на пересечении улиц Грозненская и Тотурбиева...',
+                    social: 'VK',
+                    btnType: buttons.subscribe
+                },
+                '2': {
+                    btnType: buttons.sendRequest
+                }
+            }
+        }
+    };
+    var userBar = {
+        phone: { name: '+7 (928) 506-67-00', link: 'tel:+7-928-506-67-00', icon: 'tel' },
+        question: { name: 'Задать вопрос', link: '#', icon: 'msg' },
+        account: { name: 'Личный кабинет', link: '#', icon: 'acc' },
+        search: { name: 'Поиск', link: '#', icon: 'search' },
+    };
 
+include button/button
 include header/header
 include logo/logo
 include sub-menu/sub-menu
@@ -48,8 +89,8 @@ include main-menu/main-menu
 include promo/promo
 include content/content
 include slider/slider
-include footer/footer
 include user-bar/user-bar
+include footer/footer
 include copyright/copyright
 
 <!DOCTYPE html>
@@ -66,3 +107,14 @@ html(lang="en")
             +header__mainbar
                 +main-menu(mainMenu)
         +content
+            +promo(promo.head, promo.subHead, promo.desc)
+                +button(
+                    buttons.promo.arrowSize,
+                    buttons.promo.arrowColor,
+                    buttons.promo.name,
+                    buttons.promo.fontSize
+                )
+            +slider
+                each item in slides
+                    +slide(item)
+            +user-bar(userBar)

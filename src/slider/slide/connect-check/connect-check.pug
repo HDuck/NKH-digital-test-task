@@ -1,0 +1,10 @@
+include connect-check__cont
+include connect-check__address
+include connect-check__info
+
+mixin connect-check
+    .connect-check
+        +connect-check__cont
+            +connect-check__address
+            +connect-check__info
+            block

@@ -1,0 +1,5 @@
+mixin button(arrowSize, color, name, txtSize)
+    .button
+        div(class=`button_size_${arrowSize} button_color_${color}`)
+        if (name)
+            button(class=`button_txt-size_${txtSize}`)= name

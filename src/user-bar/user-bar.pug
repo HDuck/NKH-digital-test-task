@@ -1,0 +1,6 @@
+include user-bar__item
+
+mixin user-bar(content)
+    .user-bar
+        each item in content
+            +user-bar__item(item.name, item.link, item.icon)

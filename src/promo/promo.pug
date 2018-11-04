@@ -1,0 +1,8 @@
+include promo__head
+include promo__desc
+
+mixin promo(head, subhead, desc)
+    section.promo
+        +promo__head(head, subhead)
+        +promo__desc(desc)
+        block
