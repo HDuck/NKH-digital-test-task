@@ -1,0 +1,18 @@
+include sub-menu__head
+include sub-menu__list
+include sub-menu__item
+
+mixin sub-menu(structure)
+    section.sub-menu
+        - var headingCount = 0;
+        while (headingCount < structure.headings.length)
+            +sub-menu__head(structure.headings[headingCount])
+            +sub-menu__list
+                - var counter = 0;
+                while (counter < structure.items[`${headingCount}`].name.length)
+                    +sub-menu__item(
+                        structure.items[`${headingCount}`].name[counter],
+                        structure.items[`${headingCount}`].link[counter]
+                    )
+                    - counter++;
+            - headingCount++;

@@ -1,3 +1,45 @@
+-
+    var logoLink = '#';
+    var devLink = 'http://nkhstudio.ru/';
+    var subMenu = {
+        headings: ['Для дома', 'Для бизнеса'],
+        items: {
+            '0': {
+                name: ['Услуги', 'Инструкции', 'Документы', 'Тарифы'],
+                link: ['#', '#', '#', '#']
+            },
+            '1': {
+                name: ['Услуги', 'Инструкции', 'Документы', 'Тарифы'],
+                link: ['#', '#', '#', '#']
+            }
+        }
+    };
+    var mainMenu = {
+        addBurger: true,
+        items: {
+            name: ['О компании', 'Техподдержка', 'Подключиться'],
+            link: ['#', '#', '#']
+        },
+        burgerItems: {
+            listOne: {
+                name: ['О компании', 'Отзывы', 'Вакансии', 'Контакты'],
+                link: ['#', '#', '#', '#']
+            },
+            listTwo: {
+                name: ['Услуги', 'Инструкции', 'Документы', 'Тарифы'],
+                link: ['#', '#', '#', '#']
+            },
+            listThree: {
+                name: ['Личный кабинет', 'Подключиться', 'Техподдержка', 'База знаний'],
+                link: ['#', '#', '#', '#']
+            },
+            listFour: {
+                name: ['+7 (928) 506-67-00', 'Задать вопрос'],
+                link: ['tel:+7-928-506-67-00', '#']
+            }
+        }
+    };
+
 include header/header
 include logo/logo
 include sub-menu/sub-menu
@@ -6,7 +48,21 @@ include main-menu/main-menu
 include promo/promo
 include content/content
 include slider/slider
-include slide/slide
 include footer/footer
 include user-bar/user-bar
 include copyright/copyright
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title NKH digital studio test task
+    body
+        +header
+            +header__sidebar
+                +logo(logoLink)
+                +sub-menu(subMenu)
+                +dev-by(devLink)
+            +header__mainbar
+                +main-menu(mainMenu)
+        +content

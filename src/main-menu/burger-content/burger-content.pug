@@ -1,0 +1,18 @@
+include burger-content__back
+include burger-content__list
+include burger-content__item
+include burger-content__social
+
+mixin burger-content(structure)
+    .burger-content
+        +burger-content__back
+        each item in structure.burgerItems
+            +burger-content__list
+                - var itemCounter = 0;
+                while (itemCounter < item.name.length)
+                    +burger-content__item(
+                        item.name[itemCounter],
+                        item.link[itemCounter]
+                    )
+                    - itemCounter++;
+        +burger-content__social

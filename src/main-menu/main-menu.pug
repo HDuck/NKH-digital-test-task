@@ -1,0 +1,19 @@
+include main-menu__list
+include main-menu__burger
+include main-menu__item
+include burger-content/burger-content
+
+mixin main-menu(structure)
+    nav.main-menu
+        +main-menu__list
+            - var itemCounter = 0;
+            while (itemCounter < structure.items.name.length)
+                if (structure.addBurger && itemCounter === 0)
+                    +main-menu__burger
+                +main-menu__item(
+                    structure.items.name[itemCounter],
+                    structure.items.link[itemCounter]
+                )
+                - itemCounter++;
+        if (structure.addBurger)
+            +burger-content(structure)
