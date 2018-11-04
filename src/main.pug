@@ -81,6 +81,7 @@
     };
 
 include button/button
+include container/container
 include header/header
 include logo/logo
 include sub-menu/sub-menu
@@ -99,24 +100,25 @@ html(lang="en")
         meta(charset="UTF-8")
         title NKH digital studio test task
     body
-        +header
-            +header__sidebar
-                +logo(logoLink)
-                +sub-menu(subMenu)
-                +dev-by(devLink)
-            +header__mainbar
-                +main-menu(mainMenu)
-        +content
-            +promo(promo.head, promo.subHead, promo.desc)
-                +button(
-                    buttons.promo.arrowSize,
-                    buttons.promo.arrowColor,
-                    buttons.promo.name,
-                    buttons.promo.fontSize
-                )
-            +slider
-                each item in slides
-                    +slide(item)
-            +user-bar(userBar)
-        +footer
-            +copyright
+        +container
+            +header
+                +header__sidebar
+                    +logo(logoLink)
+                    +sub-menu(subMenu)
+                    +dev-by(devLink)
+                +header__mainbar
+                    +main-menu(mainMenu)
+            +content
+                +promo(promo.head, promo.subHead, promo.desc)
+                    +button(
+                        buttons.promo.arrowSize,
+                        buttons.promo.arrowColor,
+                        buttons.promo.name,
+                        buttons.promo.fontSize
+                    )
+                +slider
+                    each item in slides
+                        +slide(item)
+                +user-bar(userBar)
+            +footer
+                +copyright
