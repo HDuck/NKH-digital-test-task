@@ -16,8 +16,8 @@ const devMode = argv.env !== 'production';
 const srcDest = './src';
 const devDest = './dist';
 const prodDest = './docs';
-const devBuild = ['pug', 'concat:css', 'concat:js', 'copyFonts', 'copyImg'];
-const prodBuild = ['pug', 'scss', 'concat:css', 'minify-css', 'concat:js', 'minify-js','copyFonts', 'copyImg'];
+const devBuild = ['pug', 'concat:css', 'concat:js', 'copyFonts', 'copySlick', 'copyImg'];
+const prodBuild = ['pug', 'scss', 'concat:css', 'minify-css', 'concat:js', 'minify-js','copyFonts', 'copySlick', 'copyImg'];
 
 gulp.task('serverSync', ['build'], () => {
     browSync.init({
@@ -70,11 +70,18 @@ gulp.task('concat:css', ['cleanCss', 'scss'], () => {
 gulp.task('concat:js', ['cleanJs'], () => {
     gulp.src([
             `${srcDest}/**/*.js`,
+            `!${srcDest}/slick/slick.min.js`,
             `${srcDest}/**/*/*.js`
         ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest(`${devMode ? devDest : srcDest}/js`))
         .pipe(browSync.stream());
+});
+
+gulp.task('copySlick', () => {
+    gulp.src(`${srcDest}/slick/`)
+        .pipe(copy(`${devMode ? devDest : prodDest}/slick`, { prefix: 2 }))
+        .pipe(gulp.dest("./slick"))
 });
 
 gulp.task('watch', () => {
@@ -111,9 +118,9 @@ gulp.task('cleanFonts', () => {
 
 gulp.task('copyFonts', ['cleanFonts'], () => {
     gulp.src([
-            `${srcDest}/**/*.otf`,
-            `${srcDest}/**/*.ttf`,
-            `${srcDest}/**/*.woff`
+            `${srcDest}/fonts/*.otf`,
+            `${srcDest}/fonts/*.ttf`,
+            `${srcDest}/fonts/*.woff`
         ])
         .pipe(copy(`${devMode ? devDest : prodDest}/fonts`, { prefix: 2 }))
         .pipe(gulp.dest("/fonts"));
@@ -124,6 +131,7 @@ gulp.task('copyImg', ['cleanImg'], () => {
             `${srcDest}/**/*.jpeg`,
             `${srcDest}/**/*.jpg`,
             `${srcDest}/**/*.png`,
+            `!${srcDest}/slick/**/*.svg`,
             `${srcDest}/**/*.svg`
         ])
         .pipe(copy(`${devMode ? devDest : prodDest}/img`, { prefix: 1 }))
