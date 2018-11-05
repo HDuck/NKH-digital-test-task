@@ -1,0 +1,28 @@
+.social-news__social {
+    order: 3;
+    align-self: flex-start;
+    margin-left: 172px;
+    position: relative;
+    width: 55px;
+    height: 32px;
+    background: transparent url('../img/slider/slide/social-news/vk.png') no-repeat center;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &::before {
+        left: -172px;
+        width: 147px;
+    }
+
+    &::after {
+        right: -183px;
+        width: 154px;
+    }
+}

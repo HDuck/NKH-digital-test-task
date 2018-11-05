@@ -1,0 +1,24 @@
+.social-news {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 410px;
+    height: 411px;
+    margin: 0 16px 14px 0;
+    background-color: #1c5394;
+
+    &:nth-child(even) {
+        margin-right: 0;
+    }
+}
+
+.social-news > .button {
+    position: absolute;
+    bottom: 22px;
+    left: 138px;
+}
+@import './social-news__title';
+@import './social-news__social';
+@import './social-news__date';

@@ -1,0 +1,22 @@
+.slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 960px;
+    height: 850px;
+    padding: 17px 23px 17px 18px;
+    background-color: #f0f1f3;
+}
+
+.slider + .button {
+    position: absolute;
+    top: 405px;
+    right: -940px;
+}
+
+.slick-list {
+    width: 836px;
+    height: 850px;
+}
+
+@import './slide/slide';

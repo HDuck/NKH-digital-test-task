@@ -1,0 +1,37 @@
+.blog-post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 410px;
+    height: 411px;
+    margin: 0 16px 14px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    &:nth-child(even) {
+        margin-right: 0;
+    }
+
+    &:hover {
+
+        & > .blog-post__img {
+            transform: translateY(-10px) scaleX(1.05);
+        }
+
+        & > .button {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+.blog-post > .button {
+    position: absolute;
+    top: 214px;
+    left: 185px;
+}
+
+@import './blog-post__title';
+@import './blog-post__img';
+@import './blog-post__date';

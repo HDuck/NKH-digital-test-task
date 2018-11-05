@@ -1,0 +1,13 @@
+.connect-check {
+    position: relative;
+    width: 837px;
+    height: 411px;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: 0;
+    transform: translateX(0);
+}
+
+
+@import './connect-check__cont';
+@import './connect-check__address';
+@import './connect-check__info';

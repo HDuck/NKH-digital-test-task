@@ -1,5 +1,18 @@
 .button_size_medium {
     width: 40px;
     height: 41px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+.button > .button_size_medium {
+    
+    &::before {
+        top: 16px;
+        left: 17px;
+    }
+
+    &::after {
+        top: 19px;
+        left: 13px;
+    }
 }

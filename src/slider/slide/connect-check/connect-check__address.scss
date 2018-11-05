@@ -1,0 +1,20 @@
+.connect-check__address {
+    position: relative;
+    height: 52px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        right: 92px;
+        display: block;
+        width: 1px;
+        height: 29px;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+}
+
+@import './connect-check__address_street';
+@import './connect-check__address_house';

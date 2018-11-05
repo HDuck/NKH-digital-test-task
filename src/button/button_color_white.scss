@@ -1,0 +1,15 @@
+.button_color_white {
+    background-color: #ffffff;
+
+}
+
+.button > .button_color_white {
+
+    &::after {
+        background-color: #1c5394;
+    }
+
+    &::before {
+        border-color: #1c5394;
+    }
+}

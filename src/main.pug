@@ -46,19 +46,20 @@
     };
     var buttons = {
         promo: { arrowSize: 'normal', arrowColor: 'blue', name: 'Подключиться', fontSize: 'normal' },
+        slider: { arrowSize: 'large', arrowColor: 'white' },
         blog: { arrowSize: 'medium', arrowColor: 'orange' },
-        subscribe: { arrowSize: 'normal', arrowColor: 'blue', name: 'Подписаться', fontSize: 'small' },
+        subscribe: { arrowSize: 'normal', arrowColor: 'gray', name: 'Подписаться', fontSize: 'small' },
         sendRequest: { arrowSize: 'normal', arrowColor: 'gray', name: 'Оставить заявку на подключение', fontSize: 'normal' },
         
     };
     var slides = {
         first: {
-            blocksType: ['blog', 'social-news', 'loc'],
+            blocksType: ['blog', 'social', 'loc'],
             blocksContent: {
                 '0': {
                     date: '28 января 2016',
                     topic: 'Телевизионные каналы в цифровом качестве на основе технологии IP (IPTV)',
-                    imgSrc: '###insert-img-src###',
+                    imgSrc: '../img/slider/slide/blog-post/blog.jpg',
                     btnType: buttons.blog
                 },
                 '1': {
@@ -69,6 +70,35 @@
                 },
                 '2': {
                     btnType: buttons.sendRequest
+                }
+            }
+        },
+        second: {
+            blocksType: ['blog', 'blog', 'blog', 'blog'],
+            blocksContent: {
+                '0': {
+                    date: '28 января 2016',
+                    topic: 'Телевизионные каналы в цифровом качестве на основе технологии IP (IPTV)',
+                    imgSrc: '../img/slider/slide/blog-post/blog.jpg',
+                    btnType: buttons.blog
+                },
+                '1': {
+                    date: '29 января 2016',
+                    topic: 'Телевизионные каналы в цифровом качестве на основе технологии IP (IPTV)',
+                    imgSrc: '../img/slider/slide/blog-post/blog.jpg',
+                    btnType: buttons.blog
+                },
+                '2': {
+                    date: '30 января 2016',
+                    topic: 'Телевизионные каналы в цифровом качестве на основе технологии IP (IPTV)',
+                    imgSrc: '../img/slider/slide/blog-post/blog.jpg',
+                    btnType: buttons.blog
+                },
+                '3': {
+                    date: '31 января 2016',
+                    topic: 'Телевизионные каналы в цифровом качестве на основе технологии IP (IPTV)',
+                    imgSrc: '../img/slider/slide/blog-post/blog.jpg',
+                    btnType: buttons.blog
                 }
             }
         }
@@ -99,9 +129,11 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         title NKH digital studio test task
+        link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
         link(rel="stylesheet", type="text/css", href=`./css/styles${devMode ? '' : '.min'}.css`)
         script(src="https://code.jquery.com/jquery-1.12.4.js")
         script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        script(type="text/javascript", src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
     body
         +container
             +header
@@ -122,6 +154,10 @@ html(lang="en")
                 +slider
                     each item in slides
                         +slide(item)
+                +button(
+                    buttons.slider.arrowSize,
+                    buttons.slider.arrowColor
+                )
                 +user-bar(userBar)
             +footer
                 +copyright

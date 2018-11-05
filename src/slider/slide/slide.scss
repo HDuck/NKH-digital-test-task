@@ -1,0 +1,18 @@
+.slide {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 848px;
+    height: 850px;
+    transition: transform .5s ease 0s;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+@import './blog-post/blog-post';
+@import './connect-check/connect-check';
+@import './social-news/social-news';

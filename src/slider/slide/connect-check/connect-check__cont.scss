@@ -1,0 +1,20 @@
+.connect-check__cont {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 391px;
+    height: 253px;
+    background-color: #ffffff;
+}
+
+
+.connect-check__cont > .button {
+    position: absolute;
+    bottom: 23px;
+    left: 18px;
+
+    & > button {
+        color: #4a4a4a;
+    }
+
+}
