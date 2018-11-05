@@ -4,12 +4,7 @@ $(function slider() {
             draggable: false,
             speed: 600
     })
-    $('.slider + .button').on('click', function(evt) {
-        evt.stopPropagation();
-        var slick = $('.slider').slick('getSlick');
-        var currSlide = $('.slider').slick('slickCurrentSlide');
-        var nextSlide;
-
+    $('.slider + .button').on('click', function() {
         $('.slider').slick('slickNext');
-    })
+    });
 });
