@@ -25,9 +25,9 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -ms-flex-line-pack: start;
   align-content: flex-start;
   width: 1570px;
@@ -817,3 +817,17 @@ body {
   .user-bar__item:last-child {
     background-image: url("../img/user-bar/search.png");
     background-position: 2px 4px; }
+
+.footer {
+  width: 820px;
+  margin-left: 24px;
+  padding: 23px 0 33px;
+  border-top: 1px solid #d8d8d8; }
+
+.copyright {
+  margin: 0;
+  padding-left: 5px;
+  font-family: 'RobotoL', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #505050; }
