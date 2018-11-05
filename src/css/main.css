@@ -31,7 +31,8 @@ body {
   -ms-flex-line-pack: start;
   align-content: flex-start;
   width: 1570px;
-  height: 1000px; }
+  height: 1000px;
+  background-color: #f0f1f3; }
 
 .button {
   display: -webkit-box;
@@ -516,8 +517,7 @@ body {
   align-items: flex-start;
   width: 960px;
   height: 850px;
-  padding: 17px 23px 17px 18px;
-  background-color: #f0f1f3; }
+  padding: 17px 23px 17px 18px; }
 
 .slider + .button {
   position: absolute;
@@ -769,3 +769,51 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: #ffffff; }
+
+.user-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 740px;
+  height: 75px;
+  margin-left: 27px; }
+
+.user-bar__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 30px;
+  padding: 2px 0 0 40px;
+  font-family: 'RobotoL', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: none;
+  color: #4a4a4a;
+  background: transparent no-repeat; }
+  .user-bar__item:first-child {
+    background-image: url("../img/user-bar/phone.png");
+    background-position: 1px 3px; }
+  .user-bar__item:nth-child(2) {
+    padding-left: 45px;
+    background-image: url("../img/user-bar/msg.png");
+    background-position: 8px 7px; }
+  .user-bar__item:nth-child(3) {
+    background-image: url("../img/user-bar/profile.png");
+    background-position: 7px 9px; }
+  .user-bar__item:last-child {
+    background-image: url("../img/user-bar/search.png");
+    background-position: 2px 4px; }

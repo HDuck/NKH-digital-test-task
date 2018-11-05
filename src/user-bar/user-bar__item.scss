@@ -1,0 +1,35 @@
+.user-bar__item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    padding: 2px 0 0 40px;
+    font-family: 'RobotoL', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-decoration: none;
+    color: #4a4a4a;
+    background: transparent no-repeat;
+
+    &:first-child {
+        background-image: url('../img/user-bar/phone.png');
+        background-position: 1px 3px;
+    }
+
+    &:nth-child(2) {
+        padding-left: 45px;
+        background-image: url('../img/user-bar/msg.png');
+        background-position: 8px 7px;
+    }
+    
+    &:nth-child(3) {
+        background-image: url('../img/user-bar/profile.png');
+        background-position: 7px 9px;
+    }
+    
+    &:last-child {
+        background-image: url('../img/user-bar/search.png');
+        background-position: 2px 4px;
+    }
+}
