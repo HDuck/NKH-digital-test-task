@@ -1,0 +1,27 @@
+.promo {
+    box-sizing: border-box;
+    width: 495px;
+    height: 1000px;
+    padding: 118px 0 0 28px;
+    background: #8cb6cc no-repeat bottom;
+    background-image:
+        linear-gradient(to top, rgba(149, 185, 203, 0) 0%, #8cb6cc 20% #8cb6cc 100%),
+        url('../img/promo/promo.jpg');
+    background-position: top, center 101.5%;
+    background-size: 495px 412px, 495px 674px;
+    transition: background-size .25s ease 0s, background-position .25s ease 0s;
+
+    &:hover {
+        background-position: top, center 106%;
+        background-size: 495px 412px, 510px 694px;
+
+        & > .promo__head,
+        & > .promo__desc,
+        & > .button {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+@import './promo__head';
+@import './promo__desc';

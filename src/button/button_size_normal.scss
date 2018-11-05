@@ -1,0 +1,14 @@
+.button_size_normal {
+    width: 34px;
+    height: 33px;
+
+    &::before {
+        top: 12px;
+        left: 12px;
+    }
+
+    &::after {
+        top: 15px;
+        left: 9px;
+    }
+}
